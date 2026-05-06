@@ -21,10 +21,10 @@ while True:
         points=0
         while i < reps:
             print(f"question: {i+1}/{reps}")
-            question_number = random.randint(0,len(questions))-1
+            question_number = random.randint(0,len(questions)-1)
             print(f'Q: {questions[question_number]["question"]}')
             for j in range(len(questions[question_number]["options"])):
-                print(f"A: {questions[question_number]["options"][j]}")
+                print(f'A: {questions[question_number]["options"][j]}')
             answer=input("answer: ")
             if answer.lower() == questions[question_number]["correct_answer"]:
                 points+=1
